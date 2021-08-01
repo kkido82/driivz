@@ -1,7 +1,7 @@
 <div class="close" (click)="removePosition();">X</div>
-<div (mousedown)="select($event);" [ngClass]="{'active': position.selected}">
+<div (mousedown)="select($event);" class="sticker" [ngClass]="{'active': position.selected}">
     <h3>{{position.name}}</h3>
-    <span>Latitude: {{position.latitude}}</span><br>
-    <span>Longitude: {{position.longitude}}</span><br>
-    <span>Date: {{position.timestamp | date:'medium'}}</span>
+    <div>Latitude: {{position.latitude}}</div>
+    <div>Longitude: {{position.longitude}}</div>
+    <div>Date: {{position.timestamp | date:'medium'}}</div>
 </div>

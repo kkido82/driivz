@@ -1,15 +1,20 @@
 .close {
-    height: 20px;
-    width: 20px;
-    float: right;
-    margin-right: 5px;
-    cursor: pointer;
+  height: 20px;
+  width: 20px;
+  float: right;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.sticker {
+  font-size: 1.3rem;
+  height: 100%;
 }
 
 .active {
-    background-color: darkcyan;
+  background-color: darkcyan;
 }
 
 h3 {
-    margin: 0
+  margin: 0
 }

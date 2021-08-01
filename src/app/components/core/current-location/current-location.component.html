@@ -1,7 +1,7 @@
-<section>
+<section class="current-location">
     <h1>Current Loaction</h1>
-    <p *ngIf="issResponse$ | async as iss">
-        <span>Lat: {{iss.iss_position.latitude}}, Lon: {{iss.iss_position.longitude}}</span><br>
-        <span>Time: {{iss.timestamp | date:'medium'}}</span>
-    </p>
+    <div *ngIf="issResponse$ | async as iss">
+        <div>Lat: {{iss.iss_position.latitude}}, Lon: {{iss.iss_position.longitude}}</div>
+        <div>Time: {{iss.timestamp | date:'medium'}}</div>
+    </div>
 </section>

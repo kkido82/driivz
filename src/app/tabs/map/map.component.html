@@ -1,6 +1,5 @@
-<p>map works!</p>
 <div class="map-container">
-  <google-map #maps height="500px" width="80%" [zoom]="zoom" [center]="center" [options]="options">
+  <google-map #maps width="100%" [zoom]="zoom" [center]="center" [options]="options">
     <ng-container *ngIf="issResponse$ | async">
       <map-marker #markerElem [position]="marker?.position" [icon]="marker?.icon"></map-marker>
     </ng-container>
