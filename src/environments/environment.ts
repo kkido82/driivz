@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  iss_endpoint: 'http://api.open-notify.org/iss-now.json',
+  interval_sec: 10
 };
 
 /*

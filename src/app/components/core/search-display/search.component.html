@@ -1,0 +1,15 @@
+<app-filter-input [positions]="positions$ | async" (filter)="filter($event)"></app-filter-input>
+
+<div class="positions-list-container" *ngIf="(positions$ | async)?.length; else noPositions" >
+    <ul class="positions-list">
+        <li class="position-element" *ngFor="let position of (positions$ | async)">
+            <app-position-item [position]="position"></app-position-item>
+        </li>
+    </ul>
+</div>
+
+<ng-template #noPositions>
+    <div>
+        no saved positions yet
+    </div>
+</ng-template>

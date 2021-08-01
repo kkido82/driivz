@@ -1,0 +1,22 @@
+.positions-list-container {
+    text-align: center;
+    max-height: 300px;
+    overflow-y: scroll;
+    
+
+    .positions-list {
+        list-style: none;
+        
+        .position-element{
+            border: 1px solid black;
+            height: 100px;
+            width: 200px;
+            border-radius: 10px;
+            background: antiquewhite;
+            margin-bottom: 15px;
+            cursor: pointer;
+
+            
+        }
+    }
+}

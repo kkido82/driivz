@@ -1,1 +1,27 @@
-<router-outlet></router-outlet>
+<section class="container">
+  <div class="side-menu">
+    <span class="app-title">
+      {{title}}
+    </span>
+    <app-search></app-search>
+  </div>
+  <div class="main">
+    <div class="header">
+      <app-current-location></app-current-location>
+    </div>
+    <div class="tabs">
+      <div class="tabset">
+        <!-- Tab 1 -->
+        <input type="radio" name="tabset" id="tab1" (click)="navigate('map')" checked>
+        <label for="tab1">Map</label>
+        <!-- Tab 2 -->
+        <input type="radio" name="tabset" id="tab2" (click)="navigate('report')">
+        <label for="tab2">Report</label>
+
+        <div class="tab-panels">
+          <router-outlet></router-outlet>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

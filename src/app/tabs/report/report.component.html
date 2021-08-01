@@ -1,0 +1,20 @@
+<ng-container *ngIf="positions$ | async as positions; else noData">
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Time</th>
+            <th>Longitude</th>
+            <th>Latitude</th>
+        </tr>
+        <tr *ngFor="let position of positions">
+            <td>{{position.name}}</td>
+            <td>{{position.timestamp}}</td>
+            <td>{{position.longitude}}</td>
+            <td>{{position.latitude}}</td>
+        </tr>
+    </table>
+</ng-container>
+
+<ng-template #noData>
+    <h2>NO SAVED POSITIONS</h2>
+</ng-template>
