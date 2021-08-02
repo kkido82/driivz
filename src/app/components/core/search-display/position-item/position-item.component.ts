@@ -1,8 +1,8 @@
-import { LEADING_TRIVIA_CHARS } from '@angular/compiler/src/render3/view/template';
-import { ChangeDetectionStrategy, Component, ElementRef, Input, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { Store } from '@ngrx/store';
+import { IssService } from 'src/app/services/iss.service';
 import { AppState } from 'src/app/store/model';
-import { removeCurrentPosition, selectPosition } from 'src/app/store/modules/positions/actions';
+import { selectPosition } from 'src/app/store/modules/positions/actions';
 import { positionsModels } from 'src/app/store/modules/positions/models';
 
 @Component({
@@ -11,16 +11,13 @@ import { positionsModels } from 'src/app/store/modules/positions/models';
   styleUrls: ['./position-item.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class PositionItemComponent implements OnInit {
+export class PositionItemComponent {
   @Input() position!: positionsModels.Position;
 
-  constructor(private store: Store<AppState>) { }
-
-  ngOnInit(): void {
-  }
+  constructor(private store: Store<AppState>, private issService: IssService) { }
 
   removePosition(): void {
-    this.store.dispatch(removeCurrentPosition({ position: this.position }));
+    this.issService.removePosition(this.position);
   }
 
   select(event: any): void {

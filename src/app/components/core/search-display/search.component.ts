@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import { AppState } from 'src/app/store/model';
@@ -11,14 +11,10 @@ import { positionsModels } from 'src/app/store/modules/positions/models';
   styleUrls: ['./search.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class SearchComponent implements OnInit {
+export class SearchComponent {
   positions$: Observable<positionsModels.Position[]> = this.store.select(state => state.positions.filtered);
 
   constructor(private store: Store<AppState>) { }
-
-  ngOnInit(): void {
-    
-  }
 
   filter(name: string): void {
     this.store.dispatch(filterPosition({ name }));

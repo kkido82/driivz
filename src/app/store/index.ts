@@ -21,7 +21,6 @@ const reducers = {
   router: routerReducer,
 };
 
-
 const metaReducers: MetaReducer[] = [hydrationMetaReducer];
 
 export { initialState, reducers, AppState, metaReducers };

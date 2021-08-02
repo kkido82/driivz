@@ -1,4 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { StoreModule } from '@ngrx/store';
+import { reducers, metaReducers } from 'src/app/store';
 
 import { ReportComponent } from './report.component';
 
@@ -8,7 +10,8 @@ describe('ReportComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ReportComponent ]
+      declarations: [ ReportComponent ],
+      imports: [StoreModule.forRoot(reducers, { metaReducers }),]
     })
     .compileComponents();
   });

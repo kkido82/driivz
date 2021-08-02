@@ -8,7 +8,6 @@ export const mapReducer = createReducer(
     on(locationLoadedSuccess, (state, action) => {
         return { ...state, issResponse: { ...action.issResponse } }
     }),
-
 );
 
 export { initialState, models }

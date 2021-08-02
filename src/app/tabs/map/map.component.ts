@@ -1,14 +1,12 @@
 import { AfterViewInit, Component, OnDestroy, OnInit, ViewChild } from '@angular/core';
-import { GoogleMap, MapMarker } from '@angular/google-maps';
-import { Store, select } from '@ngrx/store';
+import { GoogleMap } from '@angular/google-maps';
+import { Store } from '@ngrx/store';
 import { SimpleModalService } from 'ngx-simple-modal';
-import { interval, Observable } from 'rxjs';
-import { filter, skip } from 'rxjs/operators';
+import { Observable } from 'rxjs';
 import { ModalComponent } from 'src/app/components/core/modal/modal.component';
 import { IssService } from 'src/app/services/iss.service';
 import { AppState } from 'src/app/store/model';
 import { positionsModels } from 'src/app/store/modules/positions/models';
-import { environment } from 'src/environments/environment';
 import { mapModels } from '../../store/modules/map/models';
 
 @Component({
