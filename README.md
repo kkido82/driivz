@@ -1,5 +1,7 @@
 # Driivz
 
+The planning of the solution can be viewed through https://draw.io --> load the diagram.drawio file to view the planning
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.4.
 
 ## Development server
