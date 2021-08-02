@@ -1,4 +1,4 @@
-<ng-container *ngIf="positions$ | async as positions; else noData">
+<ng-container *ngIf="(positions$ | async) && (positions$ | async)?.length; else noData">
     <table class="table">
         <thead>
             <tr>
@@ -9,7 +9,7 @@
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let position of positions">
+            <tr *ngFor="let position of (positions$ | async)">
                 <td>{{position.name}}</td>
                 <td>{{position.timestamp}}</td>
                 <td>{{position.longitude}}</td>
@@ -20,5 +20,7 @@
 </ng-container>
 
 <ng-template #noData>
+    <div class="no-data">
     <h2>NO SAVED POSITIONS</h2>
+</div>
 </ng-template>
