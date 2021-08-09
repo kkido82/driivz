@@ -10,7 +10,7 @@ import { selectTab } from './store/modules/app/actions';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'driivz';
+  title = 'iss_monitor';
 
 
   constructor(private router: Router, private store: Store<AppState>) { }
